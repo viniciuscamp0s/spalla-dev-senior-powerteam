@@ -62,6 +62,9 @@ inicio="$(date +%s)"
 avisou=0
 while ! mkdir "$TRAVA" 2>/dev/null; do
   desfazer_se_velha
+  # acabou de desfazer uma trava velha: tenta de novo já, antes de olhar o relógio (num PC carregado, desfazer pode
+  # levar mais que a espera inteira, e a chamada desistiria com a trava livre)
+  [ -d "$TRAVA" ] || continue
   if [ $(( $(date +%s) - inicio )) -ge "$ESPERA_S" ]; then
     echo "trava.sh: '$nome' ocupada há mais de $(( ESPERA_S / 60 )) min; tente de novo depois" >&2
     exit 75

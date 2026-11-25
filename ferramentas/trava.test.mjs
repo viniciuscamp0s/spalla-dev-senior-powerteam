@@ -39,7 +39,7 @@ test('desfaz trava velha e roda o comando', { skip: !temBash }, () => {
   const p = pasta();
   mkdirSync(join(p, 'pesada.lock'));
   writeFileSync(join(p, 'pesada.lock', 'dono'), `pid=\ndesde=1\n`);
-  const r = rodar({ TRAVA_PASTA: p, TRAVA_ESPERA_S: '5', TRAVA_INTERVALO_S: '1' }, 'pesada', 'bash', '-c', 'exit 0');
+  const r = rodar({ TRAVA_PASTA: p, TRAVA_ESPERA_S: '1', TRAVA_INTERVALO_S: '1' }, 'pesada', 'bash', '-c', 'exit 0');
   assert.equal(r.status, 0);
 });
 
