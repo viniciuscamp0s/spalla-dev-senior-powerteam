@@ -61,7 +61,7 @@ conferência, o mais forte só para julgamento.
 
 | Habilidade | Quando |
 |---|---|
-| [claude-economia-de-cota](https://github.com/viniciuscamp0s/claude-economia-de-cota) (nossa) | Bater no limite antes do fim da semana; medir onde vão os tokens novos e ligar as correções |
+| [spalla-senior-agente-economia-token](https://github.com/viniciuscamp0s/spalla-senior-agente-economia-token) (nossa) | Bater no limite antes do fim da semana; medir onde vão os tokens novos e ligar as correções |
 | `rtk` | Sempre: corta a saída de `git`, testes, `ls`, busca antes de entrar no contexto |
 | `ponytail` | Não instalamos o plugin: o que só ele tinha virou a `execucao-enxuta` (veredito em [`03-economia-de-cota.md`](03-economia-de-cota.md)) |
 
@@ -69,7 +69,7 @@ conferência, o mais forte só para julgamento.
 
 | Habilidade | Quando |
 |---|---|
-| [maestro-generico](https://github.com/viniciuscamp0s/maestro-generico) (nosso) | Você quer falar com um agente só que divide, escolhe modelo, abre e acompanha as sessões |
+| [webster-maestro-de-agentes](https://github.com/viniciuscamp0s/webster-maestro-de-agentes) (nosso) | Você quer falar com um agente só que divide, escolhe modelo, abre e acompanha as sessões |
 | [`trava.sh`](../ferramentas/trava.sh) (nossa) | Várias sessões no mesmo computador rodando build e testes |
 | [`checkpoint-de-raciocinio`](../skills/checkpoint-de-raciocinio/SKILL.md) (nossa) | Um "sempre" ou "nunca" que tem de virar regra permanente |
 | `claude-md-management` | Manter o CLAUDE.md curto e atual |

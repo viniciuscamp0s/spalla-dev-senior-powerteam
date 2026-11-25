@@ -64,8 +64,8 @@ nossos.
 | [`skills/checkpoint-de-raciocinio`](skills/checkpoint-de-raciocinio/SKILL.md) | transforma um "sempre/nunca" em regra permanente no lugar certo |
 | [`ferramentas/trava.sh`](ferramentas/trava.sh) | um trabalho pesado por vez no PC, entre todas as sessões |
 | [`docs/`](docs/) | o fluxo de ponta a ponta, o guia das habilidades, o padrão de engenharia, os erros que já cometemos |
-| [claude-economia-de-cota](https://github.com/viniciuscamp0s/claude-economia-de-cota) | diagnóstico e correção de desperdício de cota (repositório próprio, MIT) |
-| [maestro-generico](https://github.com/viniciuscamp0s/maestro-generico) | o Maestro: um agente só que divide, escolhe modelo, abre e acompanha as sessões (repositório próprio) |
+| [spalla-senior-agente-economia-token](https://github.com/viniciuscamp0s/spalla-senior-agente-economia-token) | diagnóstico e correção de desperdício de cota (repositório próprio, MIT) |
+| [webster-maestro-de-agentes](https://github.com/viniciuscamp0s/webster-maestro-de-agentes) | o Maestro: um agente só que divide, escolhe modelo, abre e acompanha as sessões (repositório próprio) |
 
 Tudo o que é nosso: MIT, por Vinicius Campos ([@viniciuscamp0s_](https://www.instagram.com/viniciuscamp0s_/) no
 Instagram). O padrão de engenharia ([`docs/05-padrao-de-engenharia.md`](docs/05-padrao-de-engenharia.md)) adota e

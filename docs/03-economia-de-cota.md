@@ -16,7 +16,7 @@ A assinatura do Claude é orçamento de construção. O que gasta a cota não é
 
 | Ferramenta | Corta | Sobreposição com as outras |
 |---|---|---|
-| [claude-economia-de-cota](https://github.com/viniciuscamp0s/claude-economia-de-cota) (nossa) | reescrita de cache depois de pausa, custo de abertura de sessão, sessão longa, subagente no modelo caro | — |
+| [spalla-senior-agente-economia-token](https://github.com/viniciuscamp0s/spalla-senior-agente-economia-token) (nossa) | reescrita de cache depois de pausa, custo de abertura de sessão, sessão longa, subagente no modelo caro | — |
 | [rtk](https://github.com/rtk-ai/rtk) | a **saída dos comandos** (git, testes, ls, busca) antes de entrar no contexto | nenhuma |
 | [ponytail](https://github.com/DietrichGebert/ponytail) | o **código que o modelo escreve** (regras de "escreva o mínimo") | só com o nosso acordo 1; o resto virou a skill `execucao-enxuta` |
 | `/compact` com foco, ou resumo de passagem | o contexto de uma sessão que ficou grande demais | complementa a primeira |
@@ -34,7 +34,7 @@ O ponytail é um prompt de "escreva o mínimo de código" ligado por ganchos (`S
 | Comentário `atalho: <limite>, <quando trocar>` e a lista de dívida | — | **Só ele tem: entra** |
 | Autoverificação em lógica não trivial; fecho com o que ficou sem conferir | TDD do superpowers (parcial) | **Entra como complemento** |
 | "Pedido vago ganha a menor versão" | Escopo é do plano aprovado | **Fica de fora**: corta escopo |
-| Painel de custo por tarefa (ledger), webhook | [claude-economia-de-cota](https://github.com/viniciuscamp0s/claude-economia-de-cota) mede a cota | Fica de fora: duplicaria |
+| Painel de custo por tarefa (ledger), webhook | [spalla-senior-agente-economia-token](https://github.com/viniciuscamp0s/spalla-senior-agente-economia-token) mede a cota | Fica de fora: duplicaria |
 | Mapa do repositório injetado na abertura | — | Fica de fora: custa tokens em toda sessão |
 | Corta a saída de comandos | [rtk](https://github.com/rtk-ai/rtk) | Não faz; sem sobreposição |
 | Corta reescrita de cache, abertura e sessão longa | claude-economia-de-cota | Não faz; sem sobreposição |

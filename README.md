@@ -1,4 +1,4 @@
-# habilidades-dev
+# spalla-dev-senior-powerteam
 
 **As habilidades de desenvolvimento com IA que usamos todo dia, num lugar só, prontas para instalar no Claude Code ou
 no Codex.**
@@ -53,8 +53,8 @@ comandos oficiais deles, copia as nossas skills e testa.
 | Depurar | `superpowers:systematic-debugging` |
 | Revisar | `code-review`, `code-simplifier`, `superpowers:requesting-code-review`, `untangle-codebase` (diagnóstico) |
 | Segurança | [`checagem-de-seguranca`](skills/checagem-de-seguranca/SKILL.md), `/security-review`, `claude-security` |
-| Economia de cota | [claude-economia-de-cota](https://github.com/viniciuscamp0s/claude-economia-de-cota), `rtk` |
-| Orquestrar sessões | [maestro-generico](https://github.com/viniciuscamp0s/maestro-generico), [`trava.sh`](ferramentas/trava.sh), [`checkpoint-de-raciocinio`](skills/checkpoint-de-raciocinio/SKILL.md), `claude-md-management`, `skill-creator`, `find-skills` |
+| Economia de cota | [spalla-senior-agente-economia-token](https://github.com/viniciuscamp0s/spalla-senior-agente-economia-token), `rtk` |
+| Orquestrar sessões | [webster-maestro-de-agentes](https://github.com/viniciuscamp0s/webster-maestro-de-agentes), [`trava.sh`](ferramentas/trava.sh), [`checkpoint-de-raciocinio`](skills/checkpoint-de-raciocinio/SKILL.md), `claude-md-management`, `skill-creator`, `find-skills` |
 | Frontend | `frontend-design`, `impeccable`, `ui-ux-pro-max`, `vercel-react-best-practices`, `web-design-guidelines`, `gsap-*`, `threejs-*` |
 
 ## O que não está aqui

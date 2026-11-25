@@ -5,7 +5,7 @@ organização: quem faz o quê, em qual modelo, quem está parado esperando voc�
 
 ## Um agente só para falar com você: o Maestro
 
-O [maestro-generico](https://github.com/viniciuscamp0s/maestro-generico) (nosso, aberto) é o jeito de trabalhar em que
+O [webster-maestro-de-agentes](https://github.com/viniciuscamp0s/webster-maestro-de-agentes) (nosso, aberto) é o jeito de trabalhar em que
 você fala com um agente só. Ele:
 
 1. **Enquadra** o pedido: separa entrega, decisão sua e o que já está rodando em outra sessão.
