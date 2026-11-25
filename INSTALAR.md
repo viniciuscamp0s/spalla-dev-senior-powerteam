@@ -38,7 +38,9 @@ projeto, seguindo o INSTALAR.md dele à risca:
 7. Rode o teste: cd habilidades-dev && npm test.
 8. Me mostre em até 8 linhas o que ficou instalado e qual habilidade usar em cada etapa (planejar, executar, testar,
    depurar, revisar, segurança, publicar), conforme habilidades-dev/docs/02-guia-das-habilidades.md.
-Regras: nada pago sem me dizer o custo antes; segredo (token, senha) eu colo direto no .env, nunca no chat.
+Regras: nada pago sem me dizer o custo antes; segredo (token, senha) eu colo direto no .env, nunca no chat; código de
+terceiro só do repositório oficial listado no CREDITOS.md, e anote num habilidades-dev/INSTALADO.md (fora do git) o
+commit ou a versão de cada um que você instalou, para eu saber o que roda aqui.
 ```
 
 ## O que a instalação faz, passo a passo
