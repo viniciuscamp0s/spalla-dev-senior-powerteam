@@ -1,0 +1,10 @@
+publicar.local.json
+node_modules/
+.env
+.env.*
+*.tmp
+.claude/
+_preview/
+.travas/
+__pycache__/
+PLAN*.md

@@ -1,0 +1,12 @@
+{
+  "name": "habilidades-dev",
+  "version": "1.0.0",
+  "description": "As habilidades de desenvolvimento com IA que usamos todo dia, agrupadas por função (planejar, executar com subagentes, testar, depurar, revisar, segurança, economia de cota, orquestrar sessões, frontend), com crédito a cada autor e as nossas em versão universal.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test ferramentas/*.test.mjs",
+    "varredura": "node ferramentas/varredura.mjs"
+  },
+  "engines": { "node": ">=20" }
+}
