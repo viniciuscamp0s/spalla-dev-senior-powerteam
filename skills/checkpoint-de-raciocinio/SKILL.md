@@ -19,17 +19,22 @@ gravada na hora, no lugar certo. Fazer a pessoa repetir uma regra que já deu é
 ## Como agir quando invocado
 
 1. **Ler o raciocínio** que o usuário acabou de descrever (na mensagem do comando ou na troca imediatamente anterior).
-2. **Abstrair o padrão:** tirar o exemplo específico e escrever a regra geral por trás dele. Exemplo: de "dividir a
+2. **Achar o mecanismo antes de gravar** (quando o checkpoint nasce de um erro): o que fez a correção ser necessária?
+   Confira na transcrição da sessão, não na lembrança nem no resumo. Se uma regra clara **já cobria** o caso e foi só
+   ignorada, é falha de execução: não grave nada novo (repetir a regra em mais lugares não conserta). Grave quando a
+   regra faltava, era ambígua, brigava com outra, ou a skill certa nem foi carregada; nesse último caso, o conserto é
+   na descrição da skill, não numa regra nova.
+3. **Abstrair o padrão:** tirar o exemplo específico e escrever a regra geral por trás dele. Exemplo: de "dividir a
    frota de carros elétricos pelos pontos de recarga da cidade" para "cruzar duas métricas relacionadas revela a
    tensão entre oferta e demanda melhor que uma métrica isolada". Se a generalização não for óbvia, pergunte em vez de
    chutar.
-3. **Achar a casa do padrão:** qual skill ou documento vai USAR esse modo de pensar de novo? Quase sempre uma skill que
+4. **Achar a casa do padrão:** qual skill ou documento vai USAR esse modo de pensar de novo? Quase sempre uma skill que
    já existe; raramente justifica uma nova. **Toda regra tem um lugar só**: se ela já mora em algum arquivo, edite lá;
    nunca escreva uma segunda cópia.
-4. **Gravar como instrução permanente e reaplicável**, não como registro de episódio. Formato: um bloco
+5. **Gravar como instrução permanente e reaplicável**, não como registro de episódio. Formato: um bloco
    `### Checkpoint: <nome curto>` com a regra geral primeiro, o porquê depois e, se ajudar, o exemplo original como
    ilustração.
-5. **Confirmar em 1 a 3 linhas:** o que foi capturado, em que arquivo e quando deve disparar daí em diante.
+6. **Confirmar em 1 a 3 linhas:** o que foi capturado, em que arquivo e quando deve disparar daí em diante.
 
 ## Regras
 
@@ -38,3 +43,6 @@ gravada na hora, no lugar certo. Fazer a pessoa repetir uma regra que já deu é
 - Checkpoint específico demais (só serve para aquele caso) não vale gravar: pergunte o que generalizar.
 - Regra aposentada morre em todos os lugares: ao trocar uma regra, procure e apague todas as cópias antigas.
 - O objetivo é a estrutura pensar melhor sozinha, não documentar o que já foi feito.
+
+---
+O passo 2 se inspira no método de diagnóstico do [session-skill-audit](https://github.com/aiwithremy/session-skill-audit) (aiwithremy), escrito aqui com as nossas palavras.

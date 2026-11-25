@@ -91,7 +91,7 @@ Modo não interativo, escrita liberada só no workspace, sem esperar aprovação
 
 ```bash
 cd "<raiz do repo>" && "$CODEX" exec -C "$(pwd)" -s workspace-write -c model_reasoning_effort=high \
-  "Implemente o $PLAN_FILE exatamente como está escrito. Não toque em nada fora do escopo descrito nele. Escreva o código." \
+  "Implemente o $PLAN_FILE exatamente como está escrito. Não toque em nada fora do escopo descrito nele. Escreva o código seguindo as regras de .claude/skills/execucao-enxuta/SKILL.md, se existir (código mínimo, sem cortar nada do plano)." \
   < /dev/null
 ```
 

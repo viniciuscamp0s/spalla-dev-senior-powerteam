@@ -22,7 +22,9 @@ Se você é autor de uma delas e quer outra forma de crédito, abra uma issue.
 | Manter o CLAUDE.md enxuto e atual | `claude-md-management` (plugin oficial) | Anthropic | [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official) | Apache-2.0 |
 | Padrão de engenharia (prompts de projeto novo, setup de projeto existente, refatoração, revisão multiagente) | `vibe-coding-toolkit` | Matheus Gomes (soumatheusgomes) | [soumatheusgomes/vibe-coding-toolkit](https://github.com/soumatheusgomes/vibe-coding-toolkit) | MIT |
 | Economia de cota: saída de comandos | `rtk` (Rust Token Killer) | rtk-ai | [rtk-ai/rtk](https://github.com/rtk-ai/rtk) | Apache-2.0 |
-| Economia de cota: texto do modelo (opcional, ver o veredito em [`docs/03-economia-de-cota.md`](docs/03-economia-de-cota.md)) | `ponytail` | Dietrich Gebert | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | MIT |
+| Execução enxuta: as regras que só ele tinha viraram a nossa skill [`execucao-enxuta`](skills/execucao-enxuta/SKILL.md) (adaptadas, com a nota de copyright; o plugin não é instalado, ver [`docs/03-economia-de-cota.md`](docs/03-economia-de-cota.md)) | `ponytail` | Dietrich Gebert | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | MIT |
+| Diagnóstico de código emaranhado (só os passos de listar e redesenhar, como entrada de um plano aprovado) | `untangle-codebase` | Maze (caldoai) | [caldoai/skills](https://github.com/caldoai/skills) | MIT |
+| Auditoria de sessão: inspirou o passo 2 da nossa [`checkpoint-de-raciocinio`](skills/checkpoint-de-raciocinio/SKILL.md) (só a ideia, com as nossas palavras) | `session-skill-audit` | aiwithremy | [aiwithremy/session-skill-audit](https://github.com/aiwithremy/session-skill-audit) | sem arquivo de licença em 25/11/2026: não instalamos nem copiamos |
 | Frontend: crítica, auditoria e polimento de interface | `impeccable` | Paul Bakaus | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | Apache-2.0 |
 | Frontend: estilos, paletas, fontes e regras de UX | `ui-ux-pro-max` | nextlevelbuilder | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | MIT |
 | Frontend: React e Next.js com desempenho | `vercel-react-best-practices` | Vercel | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) | MIT (declarada no frontmatter da skill) |
@@ -58,6 +60,7 @@ nossos.
 |---|---|
 | [`skills/route`](skills/route/SKILL.md) | o Claude planeja e revisa, o Codex executa |
 | [`skills/checagem-de-seguranca`](skills/checagem-de-seguranca/SKILL.md) | 17 riscos + infra, com varredor sem IA |
+| [`skills/execucao-enxuta`](skills/execucao-enxuta/SKILL.md) | código mínimo só na fase de execução, sem cortar escopo (adaptada do ponytail, MIT) |
 | [`skills/checkpoint-de-raciocinio`](skills/checkpoint-de-raciocinio/SKILL.md) | transforma um "sempre/nunca" em regra permanente no lugar certo |
 | [`ferramentas/trava.sh`](ferramentas/trava.sh) | um trabalho pesado por vez no PC, entre todas as sessões |
 | [`docs/`](docs/) | o fluxo de ponta a ponta, o guia das habilidades, o padrão de engenharia, os erros que já cometemos |

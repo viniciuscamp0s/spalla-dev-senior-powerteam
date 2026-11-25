@@ -6,6 +6,7 @@ Criadas por nós, em versão universal (sem nada do nosso negócio dentro). Inst
 | Skill | Função | Como chamar |
 |---|---|---|
 | [`route`](route/SKILL.md) | Executar com outro modelo: o Claude planeja e revisa, o Codex escreve o código | `/route "<tarefa>"` |
+| [`execucao-enxuta`](execucao-enxuta/SKILL.md) | Executar: código mínimo só na fase de execução, sem cortar escopo | entra sozinha no prompt do executor da `route`; ou "implemente o plano com execução enxuta" |
 | [`checagem-de-seguranca`](checagem-de-seguranca/SKILL.md) | Segurança: 17 riscos + infra, com varredor sem IA (`scripts/varrer.py`) | "checagem de segurança" no fim de toda implementação |
 | [`checkpoint-de-raciocinio`](checkpoint-de-raciocinio/SKILL.md) | Orquestrar: transforma um "sempre/nunca" em regra permanente no arquivo certo | `/checkpoint-de-raciocinio` ou "aprenda esse modo de pensar" |
 

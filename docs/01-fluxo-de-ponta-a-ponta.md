@@ -44,7 +44,9 @@ Escolha o executor pelo tipo de trabalho:
 | Bug | `superpowers:systematic-debugging`: reproduzir, achar a causa, só então corrigir, com teste de regressão |
 | Interface | `frontend-design` para a direção, `impeccable` e `ui-ux-pro-max` para o acabamento, `web-design-guidelines` para a auditoria |
 
-Regras que valem em toda execução: menor mudança completa; um escritor por arquivo; trabalho pesado (build, suíte de
+Regras que valem em toda execução: menor mudança completa, com a skill
+[`execucao-enxuta`](../skills/execucao-enxuta/SKILL.md) carregada só nesta etapa (no planejamento e na revisão ela
+cortaria escopo); um escritor por arquivo; trabalho pesado (build, suíte de
 testes, deploy) pela [trava](../ferramentas/trava.sh), um por vez no computador.
 
 ## 4. Revisão

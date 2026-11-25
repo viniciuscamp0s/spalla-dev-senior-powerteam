@@ -18,23 +18,35 @@ A assinatura do Claude é orçamento de construção. O que gasta a cota não é
 |---|---|---|
 | [claude-economia-de-cota](https://github.com/viniciuscamp0s/claude-economia-de-cota) (nossa) | reescrita de cache depois de pausa, custo de abertura de sessão, sessão longa, subagente no modelo caro | — |
 | [rtk](https://github.com/rtk-ai/rtk) | a **saída dos comandos** (git, testes, ls, busca) antes de entrar no contexto | nenhuma |
-| [ponytail](https://github.com/DietrichGebert/ponytail) | o **texto que o modelo escreve** (prompt de "escreva o mínimo" injetado por ganchos) | praticamente nenhuma |
+| [ponytail](https://github.com/DietrichGebert/ponytail) | o **código que o modelo escreve** (regras de "escreva o mínimo") | só com o nosso acordo 1; o resto virou a skill `execucao-enxuta` |
 | `/compact` com foco, ou resumo de passagem | o contexto de uma sessão que ficou grande demais | complementa a primeira |
 
 ## Veredito sobre o ponytail
 
-Analisamos o ponytail contra a nossa ferramenta antes de decidir. Ele é um prompt de "escreva o mínimo" ligado por
-ganchos (`SessionStart`, `SubagentStart`, `UserPromptSubmit`): corta tokens de **saída**. A nossa corta a reescrita de
-cache, a abertura de sessão e o modelo de subagente, que no nosso uso pesavam muito mais. Não competem.
+O ponytail é um prompt de "escreva o mínimo de código" ligado por ganchos (`SessionStart`, `SubagentStart`,
+`UserPromptSubmit`). Fizemos o mapa de sobreposição antes de decidir:
 
-**Mantemos a nossa como base e deixamos o ponytail como complemento opcional, em teste:**
+| O que o ponytail faz | O que já tínhamos | Decisão |
+|---|---|---|
+| Menor mudança completa: reusar, nada de abstração, opção ou dependência não pedida | Acordo 1 do [padrão de engenharia](05-padrao-de-engenharia.md) | Igual: fica numa casa só, a nossa |
+| "Nunca corte validação, erro, segurança" | Acordos 4 e 6 e a [checagem de segurança](../skills/checagem-de-seguranca/SKILL.md) | Igual: nossa |
+| Escada de reuso (código da casa → biblioteca padrão → dependência instalada → uma linha) | — | **Só ele tem: entra** |
+| Comentário `atalho: <limite>, <quando trocar>` e a lista de dívida | — | **Só ele tem: entra** |
+| Autoverificação em lógica não trivial; fecho com o que ficou sem conferir | TDD do superpowers (parcial) | **Entra como complemento** |
+| "Pedido vago ganha a menor versão" | Escopo é do plano aprovado | **Fica de fora**: corta escopo |
+| Painel de custo por tarefa (ledger), webhook | [claude-economia-de-cota](https://github.com/viniciuscamp0s/claude-economia-de-cota) mede a cota | Fica de fora: duplicaria |
+| Mapa do repositório injetado na abertura | — | Fica de fora: custa tokens em toda sessão |
+| Corta a saída de comandos | [rtk](https://github.com/rtk-ai/rtk) | Não faz; sem sobreposição |
+| Corta reescrita de cache, abertura e sessão longa | claude-economia-de-cota | Não faz; sem sobreposição |
 
-1. Instale sem o painel e sem webhook, com o mapa desligado (`PONYTAIL_MAP=0`).
-2. Rode uma semana e compare os tokens novos com a semana anterior (o diagnóstico da claude-economia-de-cota faz a
-   conta).
-3. Economizou menos de 5%? Desligue.
-4. **Risco a vigiar:** o modo "mínimo" pode reduzir escopo (entregar menos do que foi pedido) e brigar com a régua de
-   qualidade. Se uma entrega voltar incompleta, ele sai.
+**Forma escolhida:** em vez de instalar o plugin, o que só ele tem virou a skill
+[`execucao-enxuta`](../skills/execucao-enxuta/SKILL.md) (MIT, com crédito), carregada **só na fase de execução**
+(no prompt do executor da [`route`](../skills/route/SKILL.md)). Motivo: os ganchos do plugin injetam o texto em toda
+abertura de sessão, em todo subagente e checam toda mensagem, inclusive no planejamento e na revisão, onde "faça o
+mínimo" vira corte de escopo. Como skill, custa zero fora da execução.
+
+**Medição:** uma semana comparando, nas sessões de execução, tokens de saída e linhas adicionadas por tarefa contra a
+semana anterior. Economizou menos de 5%, ou alguma entrega voltou com escopo cortado: sai.
 
 ## Disciplina que vale mais que qualquer ferramenta
 

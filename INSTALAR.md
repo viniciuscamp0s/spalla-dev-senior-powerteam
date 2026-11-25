@@ -28,13 +28,15 @@ projeto, seguindo o INSTALAR.md dele à risca:
      /plugin marketplace add nextlevelbuilder/ui-ux-pro-max-skill
      /plugin install ui-ux-pro-max@ui-ux-pro-max-skill
 5. Instale as outras skills de terceiros a partir dos repositórios originais listados em habilidades-dev/CREDITOS.md
-   (impeccable com "npx impeccable install"; as da Vercel, a grill-me, as gsap-* e as threejs-* com
+   (impeccable com "npx impeccable install"; a untangle-codebase copiando só a pasta skills/untangle-codebase de
+   caldoai/skills; as da Vercel, a grill-me, as gsap-* e as threejs-* com
    "npx skills add <dono>/<repo>" ou clonando numa pasta temporária e copiando só as pastas de skill para
    .claude/skills/), mantendo o LICENSE de cada uma. Não copie nada que a licença não permita. Pergunte antes de
    instalar gsap e threejs: só fazem sentido se eu mexo com animação ou 3D na web.
 6. Economia de cota: instale o rtk pelo README de https://github.com/rtk-ai/rtk (rode "rtk init -g" no fim) e me
-   ofereça a claude-economia-de-cota (https://github.com/viniciuscamp0s/claude-economia-de-cota). O ponytail é
-   opcional: só instale se eu pedir, seguindo o veredito de habilidades-dev/docs/03-economia-de-cota.md.
+   ofereça a claude-economia-de-cota (https://github.com/viniciuscamp0s/claude-economia-de-cota). Não instale o
+   plugin ponytail: o que só ele tinha já vem na nossa skill execucao-enxuta (veredito em
+   habilidades-dev/docs/03-economia-de-cota.md).
 7. Rode o teste: cd habilidades-dev && npm test.
 8. Me mostre em até 8 linhas o que ficou instalado e qual habilidade usar em cada etapa (planejar, executar, testar,
    depurar, revisar, segurança, publicar), conforme habilidades-dev/docs/02-guia-das-habilidades.md.
@@ -48,7 +50,7 @@ commit ou a versão de cada um que você instalou, para eu saber o que roda aqui
 | Passo | O que acontece | Quanto custa |
 |---|---|---|
 | Ferramentas | Node, git, bash, python | 0 (tudo aberto) |
-| Skills nossas | `route`, `checagem-de-seguranca`, `checkpoint-de-raciocinio` | 0 |
+| Skills nossas | `route`, `execucao-enxuta`, `checagem-de-seguranca`, `checkpoint-de-raciocinio` | 0 |
 | Plugins de terceiros | superpowers e os plugins oficiais, pelos comandos `/plugin` de cada autor | 0 |
 | Skills de terceiros | baixadas dos repositórios originais (lista e licenças em [`CREDITOS.md`](CREDITOS.md)) | 0 |
 | Economia de cota | rtk e, se quiser, claude-economia-de-cota | 0 |

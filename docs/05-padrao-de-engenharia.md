@@ -11,6 +11,8 @@ divergências da seção 3 e com as 10 regras de observabilidade da seção 4, q
 | Sistema novo | `docs/prompts/11-next-project-bootstrap.md` | Com as regras de observabilidade desde o primeiro commit |
 | Melhorar sistema existente | `docs/prompts/12-existing-project-setup.md` | Um sistema por sessão, plano aprovado antes de executar |
 | Arquivo grande demais | `docs/prompts/09-file-size-refactor.md` | Só no arquivo que a tarefa já está mexendo |
+| Código emaranhado | skill `untangle-codebase` ([caldoai/skills](https://github.com/caldoai/skills)), só os passos de listar e redesenhar | O resultado vira plano aprovado, uma área por vez; nunca "consertar tudo até o fim" num sistema com usuário (acordo 5) |
+| Implementar um plano aprovado | skill [`execucao-enxuta`](../skills/execucao-enxuta/SKILL.md) | Só na execução, nunca no planejamento nem na revisão |
 | Revisão de código | `docs/prompts/03-multi-agent-code-review.md` ou o plugin `code-review` | Ciclos proporcionais ao risco |
 | Pedido vago | `docs/prompts/04-brainstorm-to-plan.md` ou `superpowers:brainstorming` | Antes de qualquer código |
 
@@ -50,7 +52,7 @@ divergências da seção 3 e com as 10 regras de observabilidade da seção 4, q
 | ESLint com regras locais | Biome no pre-commit | Mesma função, mais rápido; o toolkit cobre Biome |
 | Sem hook de pre-commit/pre-push | Trava de segredo + typecheck + lint no pre-commit, testes no pre-push | Segredo vazado é prioridade máxima; hook é trava técnica, não preferência |
 | 3 a 8 ciclos de revisão após cada implementação | Proporcional ao risco, com o custo estimado: 1 em mudança comum, 3+ em dinheiro, auth, banco e dado pessoal | Orçamento de tokens |
-| Plugins de "escreva menos" injetados em toda sessão | Opcionais, em teste de uma semana (ver [`03-economia-de-cota.md`](03-economia-de-cota.md)) | Medir antes de adotar |
+| Plugins de "escreva menos" (Caveman, Ponytail) injetados em toda sessão | Não instalar os plugins: o que só o Ponytail tinha virou a skill `execucao-enxuta`, carregada só na execução (ver [`03-economia-de-cota.md`](03-economia-de-cota.md)) | Gancho em toda sessão custa tokens também no planejamento e na revisão, onde "faça o mínimo" corta escopo |
 | Nove documentos de projeto | Preservar o documento canônico que o projeto já tem; sistema novo usa os nove | Nunca criar fonte concorrente |
 | `AGENTS.md` compartilhado + `CLAUDE.md` ponte | Adotado em sistema novo; nos existentes, quando o Codex passar a executar ali com frequência | O Codex lê `AGENTS.md`, não `CLAUDE.md` |
 

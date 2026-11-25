@@ -17,6 +17,7 @@ certo. Autor e licença de cada uma: [`CREDITOS.md`](../CREDITOS.md).
 | Habilidade | Quando | Não use para |
 |---|---|---|
 | [`route`](../skills/route/SKILL.md) (nossa) | Tarefa delimitada; o Claude planeja e revisa, o Codex escreve | Arquitetura, pedido vago |
+| [`execucao-enxuta`](../skills/execucao-enxuta/SKILL.md) (nossa) | Escrever o código de um plano aprovado: escada de reuso, comentário `atalho:`, autoverificação | Planejar ou revisar (ali ela cortaria escopo) |
 | `superpowers:subagent-driven-development` | Plano com tarefas independentes, um subagente por tarefa | Tarefas que mexem no mesmo arquivo |
 | `superpowers:dispatching-parallel-agents` | 2 ou mais investigações sem estado compartilhado | Trabalho sequencial |
 | `superpowers:executing-plans` | Executar você mesmo, na sessão, um plano escrito | — |
@@ -45,6 +46,7 @@ conferência, o mais forte só para julgamento.
 | `code-review` | Revisão do diff atual ou de um pull request |
 | `superpowers:requesting-code-review` / `receiving-code-review` | Pedir revisão com contexto; receber revisão sem concordar por educação |
 | `code-simplifier` | Depois de aprovado, para tirar o excesso sem mudar comportamento |
+| `untangle-codebase` | Código emaranhado (uma mudança simples mexe em muitos lugares): use os passos de listar e redesenhar como diagnóstico, e o resultado vira plano aprovado, uma área por vez |
 | `superpowers:finishing-a-development-branch` | Decidir como integrar o branch (merge, PR, limpeza) |
 
 ## Segurança
@@ -61,7 +63,7 @@ conferência, o mais forte só para julgamento.
 |---|---|
 | [claude-economia-de-cota](https://github.com/viniciuscamp0s/claude-economia-de-cota) (nossa) | Bater no limite antes do fim da semana; medir onde vão os tokens novos e ligar as correções |
 | `rtk` | Sempre: corta a saída de `git`, testes, `ls`, busca antes de entrar no contexto |
-| `ponytail` | Opcional, em teste de uma semana (veredito em [`03-economia-de-cota.md`](03-economia-de-cota.md)) |
+| `ponytail` | Não instalamos o plugin: o que só ele tinha virou a `execucao-enxuta` (veredito em [`03-economia-de-cota.md`](03-economia-de-cota.md)) |
 
 ## Orquestrar sessões
 
